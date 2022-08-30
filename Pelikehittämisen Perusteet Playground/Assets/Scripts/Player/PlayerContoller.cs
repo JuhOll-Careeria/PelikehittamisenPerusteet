@@ -15,7 +15,7 @@ public class PlayerContoller : MonoBehaviour
 
     private Rigidbody2D rb;  // Rigidbody referenssi 
     private Vector2 playerInput;  // Pelaajan input
-    private bool turnedRight = true;  // Onko pelaaja kääntynyt oikealle, jos False niin on kääntynyt vasemmalle
+    private bool turnedRight = true;  // Onko pelaaja kï¿½ï¿½ntynyt oikealle, jos False niin on kï¿½ï¿½ntynyt vasemmalle
     private AudioSource AS;  // Audiosource referenssi
 
     [HideInInspector] public bool isDead = false;
@@ -80,8 +80,11 @@ public class PlayerContoller : MonoBehaviour
     {
         // Liikutetaan pelaajaa
         rb.velocity = playerInput;
-
+        
         //agege
+
+        // asgawgag
+
     }
 
     void GroundCheck()
@@ -89,7 +92,7 @@ public class PlayerContoller : MonoBehaviour
         Debug.DrawRay(this.transform.position, Vector2.down * groundSensorDist, Color.green);
         RaycastHit2D hit = Physics2D.Raycast(this.transform.position, Vector2.down, groundSensorDist, groundMask);
 
-        // Jos pelaajan rigidbodyn velocity.y arvo on 0.01 ja -0.01 välillä, ollaan "Grounded" eli maassa
+        // Jos pelaajan rigidbodyn velocity.y arvo on 0.01 ja -0.01 vï¿½lillï¿½, ollaan "Grounded" eli maassa
         if (hit.collider != null)
         {
             if (isGrounded == false)
@@ -108,7 +111,7 @@ public class PlayerContoller : MonoBehaviour
 
     void Jump()
     {
-        // Kun ollaan "grounded" ja painetaan Space, hypätään
+        // Kun ollaan "grounded" ja painetaan Space, hypï¿½tï¿½ï¿½n
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * jumpForce);
