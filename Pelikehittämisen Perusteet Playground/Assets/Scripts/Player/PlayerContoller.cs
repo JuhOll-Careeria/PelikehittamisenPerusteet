@@ -80,6 +80,8 @@ public class PlayerContoller : MonoBehaviour
     {
         // Liikutetaan pelaajaa
         rb.velocity = playerInput;
+
+        //agege
     }
 
     void GroundCheck()
